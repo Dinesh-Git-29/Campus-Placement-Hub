@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resource Portal</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Search Resources</h2>
+    <label for="category">Select Category:</label>
+    <select id="category">
+        <option value="">All</option>
+        <option value="Previous Year Papers">Previous Year Papers</option>
+        <option value="Aptitude">Aptitude</option>
+        <option value="Technical MCQ">Technical MCQ</option>
+    </select>
+    <button onclick="loadResources()">Search</button>
+
+    <h2>Available Resources</h2>
+    <div id="resourceList"></div>
+</div>
+<script th:src="@{/js/student-resources.js}"></script>
+</body>
+</html>

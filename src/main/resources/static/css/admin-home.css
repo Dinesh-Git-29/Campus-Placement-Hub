@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #fbbf24;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Admin Controls Section */
+.main-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.admin-controls h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #0073e6;
+}
+
+.admin-controls ul {
+    list-style: none;
+}
+
+.admin-controls li {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #0073e6;
+    font-size: 18px;
+}
+
+/* Recent Activities */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+
+
+.activity-box {
+    background: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .admin-controls li {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Marquee Animation */
+.marquee-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: slideLeft 15s linear infinite;
+}
+
+/* Each Event Box */
+.activity-box {
+    background: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Keyframes for Right-to-Left Animation */
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

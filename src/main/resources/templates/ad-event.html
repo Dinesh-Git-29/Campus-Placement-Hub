@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Event</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input, button { margin: 10px; padding: 10px; width: 300px; }
+    </style>
+</head>
+<body>
+
+<h2>Admin - Add Event</h2>
+<input type="text" id="eventName" placeholder="Event Name">
+<input type="date" id="eventDate">
+<button onclick="addEvent()">Add Event</button>
+
+<script>
+    const Name = sessionStorage.getItem("name");
+    const role = sessionStorage.getItem("role");
+if (!Name) {
+    window.location.href = "/login";
+}
+ if (!role || role.toLowerCase() !== "admin") {
+     alert("Unauthorized access!");
+     window.history.back(); // Reload the same page
+ }
+    function addEvent() {
+        const eventName = document.getElementById("eventName").value;
+        const eventDate = document.getElementById("eventDate").value;
+
+        if (!eventName || !eventDate) {
+            alert("Please enter event name and date.");
+            return;
+        }
+
+        fetch("http://localhost:8080/events/add", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ eventName, eventDate })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Event added successfully!");
+            document.getElementById("eventName").value = "";
+            document.getElementById("eventDate").value = "";
+        })
+        .catch(error => console.error("Error adding event:", error));
+    }
+</script>
+
+</body>
+</html>

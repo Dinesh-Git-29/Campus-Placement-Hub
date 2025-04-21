@@ -1,0 +1,67 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Logout Container */
+.logout-container {
+    background: white;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 320px;
+}
+
+.logout-container h2 {
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.logout-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.logout-btn, .cancel-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background: #d9534f;
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    background: #5bc0de;
+    color: white;
+}
+
+.logout-btn:hover {
+    background: #c9302c;
+}
+
+.cancel-btn:hover {
+    background: #31b0d5;
+}

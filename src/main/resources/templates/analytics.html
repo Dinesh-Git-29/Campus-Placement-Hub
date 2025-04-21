@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Dashboard - Placement Portal</title>
+<link rel="stylesheet" th:href="@{css/analytics.css}">
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="analytics-container">
+<header>
+<h1>Placement Analytics Dashboard</h1>
+</header>
+
+<div class="stats">
+<div class="card">
+<h3>Total Students</h3>
+<p id="totalStudents">350</p>
+</div>
+<div class="card">
+<h3>Placed Students</h3>
+<p id="placedStudents">280</p>
+</div>
+<div class="card">
+<h3>Companies Visited</h3>
+<p id="companiesVisited">40</p>
+</div>
+<div class="card">
+<h3>Highest Package</h3>
+<p id="highestPackage">₹15 LPA</p>
+</div>
+</div>
+
+<section class="charts">
+<div class="chart-container">
+<canvas id="placementChart"></canvas>
+</div>
+<div class="chart-container">
+<canvas id="departmentChart"></canvas>
+</div>
+</section>
+</div>
+
+<script th:src="@{js/analytics.js}"></script>
+</body>
+</html>

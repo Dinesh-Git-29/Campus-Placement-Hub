@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Experiences</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{/js/experience.js}" defer></script>
+</head>
+<body>
+<div class="container">
+    <h2>Share Your Interview Experience</h2>
+    <form id="experienceForm" enctype="multipart/form-data">
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" required>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" required>
+
+        <label for="rounds">Interview Rounds & Details:</label>
+        <textarea id="rounds" required></textarea>
+
+        <label for="file">Upload Supporting Files (PDF, Word, Image):</label>
+        <input type="file" id="file" accept=".pdf,.doc,.docx,.jpg,.png">
+
+        <button type="submit">Submit Experience</button>
+    </form>
+
+    <h2>Search Interview Experiences</h2>
+    <label for="searchCompany">Company Name:</label>
+    <input type="text" id="searchCompany">
+
+    <label for="searchRole">Role:</label>
+    <input type="text" id="searchRole">
+
+    <button onclick="searchExperiences()">Search</button>
+
+    <div id="results"></div>
+</div>
+</body>
+</html>

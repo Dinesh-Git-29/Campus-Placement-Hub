@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Portal</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<header>
+    <div class="logo">Placement Portal</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="/analytics">Analytics</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Campus Connect</h1>
+        <p>Your gateway to Top Company Placements, Career Guidances, Placement Preparations, and Industry Connections.</p>
+        <a href="/login" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- Placement Statistics Section -->
+    <section class="statistics">
+        <h2>Placement Highlights</h2>
+        <div class="stats-container">
+            <div class="stat-box hidden">
+                <h3>🏢 150+</h3>
+                <p>Companies Visited</p>
+            </div>
+            <div class="stat-box hidden">
+                <h3>🎓 500+</h3>
+                <p>Students Placed</p>
+            </div>
+            <div class="stat-box hidden">
+                <h3>💰 ₹20 LPA</h3>
+                <p>Highest Package</p>
+            </div>
+            <div class="stat-box hidden">
+                <h3>📈 90%</h3>
+                <p>Placement Rate</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 College Placement Portal. All Rights Reserved.</p>
+</footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

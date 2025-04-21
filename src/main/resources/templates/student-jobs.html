@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{/js/student-jobs.js}" defer></script>
+</head>
+<body>
+<div class="container">
+    <h2>Available Jobs</h2>
+    <div id="preferredJobs">
+        <h3>Jobs Matching Your Preferred Role</h3>
+        <div id="preferredList"></div>
+    </div>
+    <br>
+    <br>
+    <div id="otherJobs">
+        <h3>Other Available Jobs</h3>
+        <div id="otherList"></div>
+    </div>
+</div>
+</body>
+</html>

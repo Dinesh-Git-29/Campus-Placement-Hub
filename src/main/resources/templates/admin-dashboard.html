@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script th:src="@{/js/admin.js}" defer></script>
+</head>
+<body>
+<div class="container">
+    <h2>Download Eligible Students</h2>
+    <form id="criteriaForm">
+        <label for="minTenth">Minimum 10th %:</label>
+        <input type="number" id="minTenth" required>
+
+        <label for="minTwelfth">Minimum 12th %:</label>
+        <input type="number" id="minTwelfth" required>
+
+        <label for="minCGPA">Minimum CGPA:</label>
+        <input type="number" step="0.01" id="minCGPA" required>
+
+        <label for="maxArrears">Maximum Arrears:</label>
+        <input type="number" id="maxArrears" required>
+
+        <label for="arrearHistory">No History of Arrears:</label>
+        <select id="arrearHistory" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <button type="submit">Download List</button>
+    </form>
+</div>
+</body>
+</html>

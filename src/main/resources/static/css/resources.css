@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.upload-section {
+    background: white;
+    padding: 20px;
+    margin: 10px auto;
+    width: 50%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+.resource-item {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    box-shadow: 0px 0px 5px gray;
+    width: 50%;
+}
+
+.resource-item button {
+    background: red;
+}

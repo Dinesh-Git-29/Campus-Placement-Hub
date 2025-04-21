@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" th:href="@{/css/chatbot.css}">
+    <script th:src="@{/js/chatbot.js}" defer></script>
+</head>
+<body>
+<div class="chatbot-container">
+    <button id="chatbot-btn" onclick="toggleChat()">💬 AI Chat</button>
+    <div id="chatbox" class="chatbox">
+        <div class="chat-header">AI Chatbot</div>
+        <div id="chat-content" class="chat-content"></div>
+        <input type="text" id="userInput" placeholder="Ask something..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2c2c2c;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevents whole-page scrolling */
+}
+
+/* Header */
+h1 {
+    color: #af40ff;
+    margin: 20px 0;
+}
+
+/* Comments container (Scrolls like YouTube Live Chat) */
+.comments-container {
+    flex-grow: 1;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Enables scrolling */
+    padding: 15px;
+    max-height: calc(100vh - 120px); /* Adjusts to fit screen */
+    scrollbar-width: thin;
+    scrollbar-color: #5b42f3 #2c2c2c;
+}
+
+/* Custom Scrollbar (For Chrome & Edge) */
+.comments-container::-webkit-scrollbar {
+    width: 8px;
+}
+.comments-container::-webkit-scrollbar-thumb {
+    background: #5b42f3;
+    border-radius: 10px;
+}
+.comments-container::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+/* Comment list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Individual comment */
+li {
+    background: #3c3c3c;
+    padding: 10px;
+    margin: 5px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+}
+
+/* Fixed comment input box at the bottom */
+.comment-box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3c3c3c;
+    padding: 15px;
+    width: 50%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+/* Comment input and textarea */
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+}

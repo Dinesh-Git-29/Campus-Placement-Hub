@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Events</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        .marquee-container { overflow: hidden; white-space: nowrap; width: 100%; background: #f0f0f0; padding: 10px; }
+        .marquee-content { display: inline-block; animation: marquee 10s linear infinite; }
+        .event-box { display: inline-block; padding: 10px 20px; background: blue; color: white; margin-right: 20px; border-radius: 5px; }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Upcoming Events</h2>
+<div class="marquee-container">
+    <div class="marquee-content" id="eventList"></div>
+</div>
+
+<script>
+    const Name = sessionStorage.getItem("name");
+    if (!Name) {
+        window.location.href = "/login";
+    }
+     if (!role || role.toLowerCase() !== "student") {
+         alert("Unauthorized access!");
+         window.history.back(); // Reload the same page
+     }
+    function fetchEvents() {
+        fetch("http://localhost:8080/events/all")
+        .then(response => response.json())
+        .then(events => {
+            const eventList = document.getElementById("eventList");
+            eventList.innerHTML = "";
+
+            const today = new Date().toISOString().split("T")[0]; // Get today's date
+
+            events.forEach(event => {
+                if (event.eventDate >= today) {
+                    const eventDiv = document.createElement("div");
+                    eventDiv.className = "event-box";
+                    eventDiv.innerText = `${event.eventName} - ${event.eventDate}`;
+                    eventList.appendChild(eventDiv);
+                }
+            });
+        })
+        .catch(error => console.error("Error fetching events:", error));
+    }
+
+    fetchEvents(); // Fetch events on page load
+</script>
+
+</body>
+</html>

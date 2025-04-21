@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" th:href="@{css/styles.css}">
+    <script th:src="@{/js/profile.js}" defer></script>
+</head>
+<body>
+<div class="container">
+    <h2>Student Profile</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" readonly>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" readonly>
+
+    <label for="department">Department:</label>
+    <input type="text" id="department" required>
+
+    <label for="rollno">Roll Number:</label>
+    <input type="text" id="rollno" required>
+
+    <label for="tenthPercent">10th Percentage:</label>
+    <input type="number" id="tenthPercent" required>
+
+    <label for="twelvePercent">12th Percentage:</label>
+    <input type="number" id="twelvePercent" required>
+
+    <label for="cgpa">CGPA:</label>
+    <input type="number" step="0.01" id="cgpa" required>
+
+    <label for="arrears">Number of Arrears:</label>
+    <input type="number" id="arrears" required>
+
+    <label for="arrearHistory">No History of Arrears:</label>
+    <select id="arrearHistory">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+
+    <label for="preferredRole">Preferred Role:</label>
+    <input type="text" id="preferredRole" required>
+
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" placeholder="Comma-separated skills" required>
+
+    <button onclick="saveProfile()">Save Profile</button>
+    <p id="message"></p>
+</div>
+</body>
+</html>

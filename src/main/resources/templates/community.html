@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Community</title>
+    <link rel="stylesheet" th:href="@{css/com-styles.css}">
+</head>
+<body>
+<h1>Student Community Discussion</h1>
+
+<!-- Comments Section (Now on Top) -->
+<div class="comments-container">
+    <h2>Community Discussions</h2>
+    <ul id="commentsList"></ul>
+</div>
+
+<!-- Comment Box (Moved Below) -->
+<div class="comment-box">
+    <h2>Post a Comment</h2>
+    <form id="commentForm">
+        <input type="text" id="username" placeholder="Enter your name" required readonly>
+        <textarea id="commentText" placeholder="Write a comment..." required></textarea>
+        <input type="file" id="commentFile" accept=".pdf,.doc,.docx,.jpg,.png">
+        <button type="submit">Post Comment</button>
+    </form>
+</div>
+
+<script th:src="@{js/com-script.js}"></script>
+</body>
+</html>
